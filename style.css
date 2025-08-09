@@ -1,0 +1,292 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins';
+}
+:root{
+    --background: rgb(24,24,24);
+    --second-background: rgb(21,21,21);
+}
+body{
+  min-height: 100vh;
+  background-color: var(--background);
+}
+a {
+  color: lightblue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2em 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(15,15,15,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+
+}
+ul{
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+nav ul a{
+  color: white;
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
+
+}
+nav ul a:hover{
+  opacity: 1;
+}
+.logo{
+  font-size: 2em;
+  color: white;
+  font-weight: 800;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+}
+.logo:hover{
+  opacity: 1;
+}
+.btn{
+  padding: 0.5em 1em;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover{
+  background-color: white;
+  color: var(--background);
+}
+span{
+  background: linear-gradient(to right, rgb(210, 210, 250),rgb(210, 210, 250));
+  background-clip: text;
+  color:transparent;
+}
+#menu{
+  color: white;
+  font-size: 3em;
+  display: none;
+}
+section{
+   min-height: 100vh;
+   padding: 5% 15%;
+
+}
+#home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  color: white;
+}
+#home img{
+  width: 12vw;
+  border-radius: 50%;
+  margin-top: 3em;
+}
+.info-box{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+  max-width: 600px;
+}
+.info-box h1{
+  font-size: 5em;
+  font-weight: 500;
+}
+.info-box h3{
+  font-size: 2em;
+  font-weight: 400;
+}
+.info-box p{
+  opacity: 0.7;
+}
+.btn-box{
+  display: flex;
+  gap: 1em ;
+}
+.btn-box .btn:nth-of-type(2){
+  background-color: white;
+  color: var(--background);
+}
+.btn-box .btn:nth-of-type(2):hover{
+  background-color: var(--background);
+  color: white;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(to bottom, #6cff52,#3ec5ff);
+}
+#about{
+  background-color: var(--second-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+}
+#about img{
+  width: 38vw;
+  border-radius: 1em;
+}
+.about-box{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2em;
+}
+.about-box p{
+  color: white;
+  opacity: 0.8;
+}
+.skills{
+  display: flex;
+  text-align: left;
+  gap: 10em;
+}
+.skills ul{
+  font-size: 1.3em;
+  font-weight: 500 ;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  opacity: 0.8;
+  align-items: baseline;
+}
+.skills ul li span{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.3em;
+  transition: 0.3s ease-in-out;
+}
+.skills ul li span:hover{
+  transform: translateX(10px);
+}
+.skills ul li i{
+  font-size: 1.2em ;
+}
+.about-box h2{
+  font-size: 2.5em;
+}
+#project{
+  background-color: var(--background);
+}
+.header{
+  text-align: center;
+  font-size: 3.5em;
+  margin: 0.5em 0;
+}
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em; /* khoảng cách giữa các box */
+}
+
+.box{
+  border: 3px solid rgb(49,49,49);
+  border-radius: 0.5em ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 3em;
+  gap: 2em;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  max-width: 1100px; /* Giới hạn chiều rộng box */
+  margin: 0 auto;
+}
+.box img {
+  max-width: 400px; /* Giới hạn kích thước ảnh */
+  height: auto;
+  display: block;   /* Để margin auto hoạt động */
+  margin: 0 auto;   /* Căn giữa theo chiều ngang */
+}
+
+.box:hover{
+  border: 3px solid rgb(100,100,100);
+}
+.box p{
+   opacity: 0.8;
+}
+.box h1{
+  font-size: 2em;
+}
+.box img{
+  min-width: 45px;
+  border-radius: 0.5em;
+}
+.box a {
+  color: #00bfff; /* Màu xanh dương sáng ban đầu */
+  text-decoration: none;
+  transition: all 0.3s ease; /* hiệu ứng mượt */
+}
+
+.box a:hover {
+  color: #1e90ff; /* Đậm hơn khi hover */
+}
+
+.box a:active {
+  color: #ffcc00; /* Đổi sang vàng khi click giữ chuột */
+  transform: scale(0.95); /* Thu nhỏ nhẹ để có cảm giác click */
+}
+#contact {
+  background-color: var(--second-background);
+  min-height: 100vh; /* Đảm bảo cao ít nhất bằng chiều cao màn hình */
+  padding: 5% 15%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contactbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  font-size: 1.2em;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.contact-item i {
+  font-size: 1.5em;
+  color: lightblue;
+}
+
+.contact-item a {
+  color: lightblue;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #1e90ff;
+}
+
