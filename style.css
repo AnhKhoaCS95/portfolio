@@ -290,3 +290,39 @@ section{
   color: #1e90ff;
 }
 
+/* Hiệu ứng hover nâng và bóng cho .box */
+.box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Hiệu ứng ảnh zoom nhẹ khi hover */
+.box img {
+  transition: transform 0.4s ease;
+}
+.box:hover img {
+  transform: scale(1.05);
+}
+
+/* Button hiệu ứng mượt */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transition: left 0.4s ease;
+}
+.btn:hover::after {
+  left: 0;
+}
+
